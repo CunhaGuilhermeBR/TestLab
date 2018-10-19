@@ -1,11 +1,11 @@
-import java.util.Scanner;
+import javax.swing.Scanner;
 
 public class Aplicacao {
    public static void main(String[] args){
    CFila F1 = new CFila();
    CFila F2 = new CFila();
    int escolha =0;
-   Scanner ler = new Scanner(System.in);
+   
    do{
        System.out.println("1 - Cadastrar morador");
        System.out.println("2 - Imprimir lista de moradores cadastrados");
