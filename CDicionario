@@ -40,7 +40,7 @@ public void imprimeCDicionario() {
 	   System.out.println("\n");
 	   cont=0;
 	   }
-	   System.out.println("Valor: |" + aux.value + "| Chave:" + aux.key);
+	   System.out.println("Valor: |" + aux.value + "| Chave:" + aux.key.toString);
 	   cont+=1;
 	   }
 	   }
