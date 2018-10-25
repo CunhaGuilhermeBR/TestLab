@@ -1,0 +1,24 @@
+public class CCelulaDicionario {
+// Atributos
+public Object key, value;
+public CCelulaDicionario prox;
+// Construtora que anula os três atributos da célula
+public CCelulaDicionario() {
+key = null;
+value = null;
+prox = null;
+}
+
+public CCelulaDicionario(Object chave, Object valor){
+key = chave;
+value = valor;
+prox = null;
+}
+
+public CCelulaDicionario(Object chave, Object valor,
+CCelulaDicionario proxima) {
+key = chave;
+value = valor;
+prox = proxima;
+}
+}
