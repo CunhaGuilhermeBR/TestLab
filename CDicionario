@@ -1,0 +1,47 @@
+public class CDicionario {
+private CCelulaDicionario primeira, ultima;
+public CDicionario() {
+primeira = new CCelulaDicionario();
+ultima = primeira;
+}
+public boolean vazio() {
+return primeira == ultima;
+}
+public void adiciona(Object chave, Object valor) {
+boolean achou = false;
+if (primeira == ultima) {
+primeira.prox = new CCelulaDicionario(chave, valor);
+ultima = primeira.prox;
+}
+else {
+for (CCelulaDicionario aux = primeira.prox; aux != null &&
+!achou; aux = aux.prox) {
+if (aux.key.equals(chave)) {
+achou = true;
+}
+}
+if (!achou) {
+ultima.prox = new CCelulaDicionario(chave, valor);
+ultima = ultima.prox;
+}
+}
+}
+public Object recebeValor(Object chave) {
+           for (CCelulaDicionario aux = primeira.prox; aux != null; aux = aux.prox) {
+               if (aux.key.equals(chave))
+                    return aux.value;
+}
+               return null;
+}
+public void imprimeCDicionario() {
+	   int cont=0;
+	   for (CCelulaDicionario aux = primeira.prox; aux != null; aux = aux.prox) {
+	   if (cont==10) {
+	   System.out.println("\n");
+	   cont=0;
+	   }
+	   System.out.println("Valor: |" + aux.value + "| Chave:" + aux.key);
+	   cont+=1;
+	   }
+	   }
+}
