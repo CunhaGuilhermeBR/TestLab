@@ -10,7 +10,7 @@ public class Programa {
 	   public void cadastrarMorador() {
 		   Morador m = new Morador();
 		   QUANT++;
-	    	cadastro.adiciona(QUANT,m.toString());
+	    	cadastro.adiciona(QUANT,m);
 	}
 
 	public void imprimirCadastrados() {
