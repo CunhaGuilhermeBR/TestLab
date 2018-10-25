@@ -1,4 +1,5 @@
 
+
 public class Programa {
 	   CFila F1 = new CFila();
 	   CFila F2 = new CFila();
@@ -7,16 +8,15 @@ public class Programa {
 	   public static int QUANT=0;
 	
 	   public void cadastrarMorador() {
-		   System.out.println("Quantidade:" + QUANT);
 		   Morador m = new Morador();
 		   QUANT++;
 	    	cadastro.adiciona(QUANT,m.toString());
-	    	System.out.println("Quantidade:" + QUANT);
 	}
 
 	public void imprimirCadastrados() {
+		System.out.println("Listagem de moradorares (Página 1)");
+		System.out.println("==================================");
 		cadastro.imprimeCDicionario();
-		
 	}
 
 	public void imprimirEspera() {
@@ -45,3 +45,4 @@ public class Programa {
 	}
 
 }
+
