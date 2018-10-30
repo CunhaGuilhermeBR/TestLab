@@ -1,5 +1,7 @@
 
 
+import java.util.Scanner;
+
 public class Programa {
 	   CFila F1 = new CFila();
 	   CFila F2 = new CFila();
@@ -14,13 +16,33 @@ public class Programa {
 	}
 
 	public void imprimirCadastrados() {
-		System.out.println("Listagem de moradorares (Página 1)");
-		System.out.println("==================================");
-		cadastro.imprimeCDicionario();
+		int i=0;
+		Scanner ler = new Scanner(System.in);
+		do{
+			System.out.println(" 1  –Listagem  simples  (apenas  CPFe  nome  do  morador)\n2  –Listagem  completa  (todos  os  dados)");
+		    i=ler.nextInt();
+		    if(i==1){
+		    	System.out.println("Listagem de moradorares (Página 1)");
+				System.out.println("==================================");
+				cadastro.imprimeCDicionario(1);
+		    }
+		    else if(i==2){
+		    	System.out.println("Listagem de moradorares (Página 1)");
+				System.out.println("==================================");
+				cadastro.imprimeCDicionario(2);
+		    }
+		} while (i!= 1 && i!=2);
+		
 	}
 
 	public void imprimirEspera() {
-		// TODO Auto-generated method stub
+		Morador m = new Morador();
+		espera.enfileira(m);
+		Morador m1 = new Morador();
+		espera.enfileira(m);
+		Morador m2 = new Morador();
+		espera.enfileira(m);
+		espera.imprimeCFila();
 		
 	}
 
